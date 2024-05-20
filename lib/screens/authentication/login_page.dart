@@ -32,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             style: TextStyle(
               fontSize: 18.0,
               color: Theme.of(context).colorScheme.primary,
+              fontStyle: FontStyle.italic,
             ),
           ),
 
@@ -61,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Not a member?',
+                'Not a member yet?',
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.primary,
                 ),
@@ -69,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
               GestureDetector(
                 onTap: widget.onTap,
                 child: Text(
-                  ' Register now',
+                  'Register now',
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.inversePrimary,
                     fontWeight: FontWeight.bold,
