@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../custom_widgets/my_textfield.dart';
 import '../../custom_widgets/my_button.dart';
+import '../homepage/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -14,6 +15,19 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
+
+  void login() {
+    /*
+    will fill later with login logic
+    */
+
+    // navigate to home page
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           // sign in button
-          MyButton(onTap: () {}, text: 'Sign in '),
+          MyButton(onTap: login, text: 'Sign in '),
           // not a member? register now
           SizedBox(height: 20.0),
 
