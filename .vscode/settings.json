@@ -1,3 +1,4 @@
 {
-  "cmake.configureOnOpen": true
+  "cmake.configureOnOpen": true,
+  "cmake.sourceDirectory": "C:/Users/cmcod/OneDrive/Desktop/All/IV 2nd Semester/PLATFORM BASED DEVELOPMENT/Mobile/Viscan-Food-Delivey-App/linux"
 }

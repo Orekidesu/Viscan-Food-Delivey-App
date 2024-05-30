@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:viscan_food_delivery_app/custom_widgets/my_drawer.dart';
+import 'package:viscan_food_delivery_app/custom_widgets/my_sliver_app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,9 +13,29 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(' This is the Homepage'),
-      ),
+      drawer: const MyDrawer(),
+      body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxScrolled) => [
+                MySliverAppBar(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Divider(
+                          indent: 25,
+                          endIndent: 25,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+
+                        // my current location
+
+                        //  description box
+                      ],
+                    ),
+                    title: Text('Title')),
+              ],
+          body: Container(
+            color: Colors.blue,
+          )),
     );
   }
 }
