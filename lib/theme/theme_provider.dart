@@ -3,7 +3,7 @@ import './dark_mode.dart';
 import './light_mode.dart';
 
 class ThemeProvider with ChangeNotifier {
-  ThemeData _themeData = darkMode;
+  ThemeData _themeData = lightMode;
 
   ThemeData get themeData => _themeData;
 
