@@ -3,23 +3,23 @@ class Food {
   final String name;
   final String description;
   final String price;
-  final String image;
   final FoodCategory category;
   List<Addon> availableAddons;
+  final String imagePath;
 
   Food({
     required this.name,
     required this.description,
     required this.price,
-    required this.image,
     required this.category,
     required this.availableAddons,
+    required this.imagePath,
   });
 }
 
 // food category
 enum FoodCategory {
-  burger,
+  burgers,
   salads,
   sides,
   desserts,

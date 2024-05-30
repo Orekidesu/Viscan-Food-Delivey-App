@@ -1,13 +1,21 @@
+import 'dart:js';
 import 'package:flutter/material.dart';
+import 'package:viscan_food_delivery_app/models/restuarant.dart';
 import 'package:viscan_food_delivery_app/screens/authentication/login_or_register.dart';
 import 'package:viscan_food_delivery_app/screens/homepage/home_page.dart';
 import 'package:viscan_food_delivery_app/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
+    MultiProvider(
+      providers: [
+        // theme provider
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+        // restaurant provider
+        ChangeNotifierProvider(create: (context) => Restaurant()),
+      ],
       child: const MyApp(),
     ),
   );
