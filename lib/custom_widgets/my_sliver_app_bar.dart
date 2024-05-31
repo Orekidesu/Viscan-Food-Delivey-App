@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:viscan_food_delivery_app/screens/cart_page/cart_page.dart';
 
 class MySliverAppBar extends StatelessWidget {
   final Widget child;
@@ -19,7 +20,11 @@ class MySliverAppBar extends StatelessWidget {
         pinned: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              // go to cart page
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => CartPage()));
+            },
             icon: const Icon(Icons.shopping_cart),
           )
         ],
