@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:viscan_food_delivery_app/data/services/auth/auth_service.dart';
 import '../../custom_widgets/my_textfield.dart';
 import '../../custom_widgets/my_button.dart';
-import '../homepage/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -16,17 +16,24 @@ class _LoginPageState extends State<LoginPage> {
 
   final TextEditingController passwordController = TextEditingController();
 
-  void login() {
-    /*
-    will fill later with login logic
-    */
+  void login() async {
+    // get instance of auth service
 
-    // navigate to home page
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => HomePage(),
-        ));
+    final _authService = AuthService();
+
+    // try sign in
+    try {
+      await _authService.signInWithEmailAndPassword(
+          emailController.text, passwordController.text);
+      // display error message if sign in fails
+    } catch (e) {
+      // ignore: use_build_context_synchronously
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: Text(e.toString()),
+              ));
+    }
   }
 
   @override

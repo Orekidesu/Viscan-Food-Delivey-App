@@ -1,13 +1,16 @@
 import 'dart:js';
 import 'package:flutter/material.dart';
+import 'package:viscan_food_delivery_app/data/services/auth/auth_gate.dart';
+import 'package:viscan_food_delivery_app/firebase_options.dart';
 import 'package:viscan_food_delivery_app/models/restuarant.dart';
-import 'package:viscan_food_delivery_app/screens/authentication/login_or_register.dart';
-import 'package:viscan_food_delivery_app/screens/homepage/home_page.dart';
 import 'package:viscan_food_delivery_app/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(
     MultiProvider(
       providers: [
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: LoginOrRegister(),
-      home: HomePage(),
+      home: const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

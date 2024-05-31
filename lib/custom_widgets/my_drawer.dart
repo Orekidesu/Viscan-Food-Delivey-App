@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:viscan_food_delivery_app/custom_widgets/my_drawer_tile.dart';
+import 'package:viscan_food_delivery_app/data/services/auth/auth_service.dart';
 import 'package:viscan_food_delivery_app/screens/settings/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  // logout method
+  void logout() {
+    // get auth service
+    final _authService = AuthService();
+    _authService.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +51,7 @@ class MyDrawer extends StatelessWidget {
         MyDrawerTile(
           text: 'Logout',
           icon: Icons.settings,
-          onTap: () => Navigator.pop(context),
+          onTap: logout,
         ),
         const SizedBox(height: 20.0)
       ]),

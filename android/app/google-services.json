@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1045414693570",
+    "project_id": "viscan-food-delivery-app",
+    "storage_bucket": "viscan-food-delivery-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045414693570:android:69b087d1b690063e0dc95b",
+        "android_client_info": {
+          "package_name": "com.example.viscan_food_delivery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDofgu8_2kg__qMJgrVqzYveUGZRoVdTuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
