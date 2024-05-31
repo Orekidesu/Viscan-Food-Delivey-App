@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:viscan_food_delivery_app/models/restuarant.dart';
 
 class MyCurrentLocation extends StatelessWidget {
-  const MyCurrentLocation({super.key});
+  MyCurrentLocation({super.key});
+
+  final TextEditingController textController = TextEditingController();
 
   void openLocationSearchBox(BuildContext context) {
     showDialog(
@@ -9,15 +13,29 @@ class MyCurrentLocation extends StatelessWidget {
         builder: (context) => AlertDialog(
               title: Text("Your location"),
               content: TextField(
-                decoration: InputDecoration(hintText: "Search Address"),
+                controller: textController,
+                decoration: InputDecoration(hintText: "Enter Address"),
               ),
               actions: [
-                TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text("Cancel")),
-                TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text("Save")),
+                // cancel button
+                MaterialButton(onPressed: () {
+                  Navigator.pop(context);
+                  textController.clear();
+                }),
+
+                // save button
+                MaterialButton(
+                  onPressed: () {
+                    // update delivery address
+                    String newAddress = textController.text;
+                    context
+                        .read<Restaurant>()
+                        .updateDeliveryAddress(newAddress);
+                    Navigator.pop(context);
+                    textController.clear();
+                  },
+                  child: Text("Save"),
+                ),
               ],
             ));
   }
@@ -36,11 +54,11 @@ class MyCurrentLocation extends StatelessWidget {
           onTap: () => openLocationSearchBox(context),
           child: Row(
             children: [
-              Text(
-                "Guadalupe, Baybay City, Leyte",
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.inversePrimary,
-                  fontWeight: FontWeight.bold,
+              Consumer<Restaurant>(
+                builder: (context, restaurant, child) => Text(
+                  restaurant.deliveryAddress,
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary),
                 ),
               ),
 
