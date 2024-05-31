@@ -20,7 +20,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Egg', price: 15.00),
         Addon(name: 'Mushroom', price: 15.00),
       ],
-      imagePath: '../../assets/images/burgers/classic_burger.jpg',
+      imagePath: 'assets/images/burgers/classic_burger.jpg',
     ),
 
     Food(
@@ -35,7 +35,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Egg', price: 15.00),
         Addon(name: 'Mushroom', price: 15.00),
       ],
-      imagePath: '../../assets/images/burgers/double_decker.jpg',
+      imagePath: 'assets/images/burgers/double_decker.jpg',
     ),
     Food(
       name: "Veggie Burger",
@@ -47,7 +47,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Cheese', price: 10.00),
         Addon(name: 'Extra Veggies', price: 20.00),
       ],
-      imagePath: '../../assets/images/burgers/veggie_burger.jpg',
+      imagePath: 'assets/images/burgers/veggie_burger.jpg',
     ),
     Food(
       name: "Chicken Burger",
@@ -61,7 +61,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Egg', price: 15.00),
         Addon(name: 'Mushroom', price: 15.00),
       ],
-      imagePath: '../../assets/images/burgers/chicken_burger.jpg',
+      imagePath: 'assets/images/burgers/chicken_burger.jpg',
     ),
     Food(
       name: "Fish Burger",
@@ -73,7 +73,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Cheese', price: 10.00),
         Addon(name: 'Extra Fish Fillet', price: 30.00),
       ],
-      imagePath: '../../assets/images/burgers/fish_burger.jpg',
+      imagePath: 'assets/images/burgers/fish_burger.jpg',
     ),
 
     // salads
@@ -87,7 +87,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Chicken', price: 20.00),
         Addon(name: 'Bacon', price: 20.00),
       ],
-      imagePath: '../../assets/images/salads/caesar_salad.jpg',
+      imagePath: 'assets/images/salads/caesar_salad.jpg',
     ),
 
     Food(
@@ -99,7 +99,7 @@ class Restaurant extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Chicken', price: 20.00),
       ],
-      imagePath: '../../assets/images/salads/greek_salad.jpg',
+      imagePath: 'assets/images/salads/greek_salad.jpg',
     ),
     Food(
       name: "Cobb Salad",
@@ -108,7 +108,7 @@ class Restaurant extends ChangeNotifier {
       price: 95.00,
       category: FoodCategory.salads,
       availableAddons: [],
-      imagePath: '../../assets/images/salads/cobb_salad.jpg',
+      imagePath: 'assets/images/salads/cobb_salad.jpg',
     ),
     Food(
       name: "Spinach Salad",
@@ -119,7 +119,7 @@ class Restaurant extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Chicken', price: 20.00),
       ],
-      imagePath: '../../assets/images/salads/spinach_salad.jpg',
+      imagePath: 'assets/images/salads/spinach_salad.jpg',
     ),
     Food(
       name: "Caprese Salad",
@@ -128,7 +128,7 @@ class Restaurant extends ChangeNotifier {
       price: 90.00,
       category: FoodCategory.salads,
       availableAddons: [],
-      imagePath: '../../assets/images/salads/caprese_salad.jpg',
+      imagePath: 'assets/images/salads/caprese_salad.jpg',
     ),
     // sides
     Food(
@@ -139,7 +139,7 @@ class Restaurant extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Cheese', price: 10.00),
       ],
-      imagePath: '../../assets/images/sides/fries.jpg',
+      imagePath: 'assets/images/sides/fries.jpg',
     ),
     Food(
       name: "Onion Rings",
@@ -148,7 +148,7 @@ class Restaurant extends ChangeNotifier {
       price: 50.00,
       category: FoodCategory.sides,
       availableAddons: [],
-      imagePath: '../../assets/images/sides/onion_ring.jpg',
+      imagePath: 'assets/images/sides/onion_ring.jpg',
     ),
     Food(
       name: "Mashed Potatoes",
@@ -159,7 +159,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Cheese', price: 10.00),
         Addon(name: 'Bacon', price: 20.00),
       ],
-      imagePath: '../../assets/images/sides/mashed_potato.jpg',
+      imagePath: 'assets/images/sides/mashed_potato.jpg',
     ),
     Food(
       name: "Coleslaw",
@@ -167,7 +167,7 @@ class Restaurant extends ChangeNotifier {
       price: 35.00,
       category: FoodCategory.sides,
       availableAddons: [],
-      imagePath: '../../assets/images/sides/coleslaw.jpg',
+      imagePath: 'assets/images/sides/coleslaw.jpg',
     ),
     Food(
       name: "Garlic Bread",
@@ -177,7 +177,7 @@ class Restaurant extends ChangeNotifier {
       availableAddons: [
         Addon(name: 'Cheese', price: 10.00),
       ],
-      imagePath: '../../assets/images/sides/garlic_bread.jpg',
+      imagePath: 'assets/images/sides/garlic_bread.jpg',
     ),
 
     // desserts
@@ -191,7 +191,7 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Extra Sprinkles', price: 5.00),
         Addon(name: 'Extra Nuts', price: 10.00),
       ],
-      imagePath: '../../assets/images/desserts/desserts.jpg',
+      imagePath: 'assets/images/desserts/desserts.jpg',
     ),
 
     // drinks
@@ -204,7 +204,7 @@ class Restaurant extends ChangeNotifier {
           Addon(name: 'Lemon', price: 5.00),
           Addon(name: 'Mint', price: 5.00),
         ],
-        imagePath: '../../assets/images/drinks/drinks.jpg'),
+        imagePath: 'assets/images/drinks/drinks.jpg'),
   ];
 
   String _deliveryAddress = "Guadalupe, Baybay City, Leyte";

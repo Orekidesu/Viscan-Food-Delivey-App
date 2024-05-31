@@ -35,6 +35,7 @@ flutter:
 
   # ================== LOCAL ASSETS ==================
   assets:
+    - assets/images/
     - assets/images/burgers/
     - assets/images/desserts/
     - assets/images/drinks/
