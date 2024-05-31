@@ -1,4 +1,3 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:viscan_food_delivery_app/data/services/auth/auth_gate.dart';
 import 'package:viscan_food_delivery_app/firebase_options.dart';
